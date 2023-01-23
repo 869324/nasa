@@ -1,0 +1,9 @@
+.home {
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+}
+.img {
+  max-height: 50%;
+  max-width: 100%;
+}
