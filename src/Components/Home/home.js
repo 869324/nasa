@@ -24,27 +24,26 @@ function Home(props) {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(picture);
-  }, [picture]);
-
   return (
-    <div className={styles.home}>
-      <div className={styles.infoDiv}>
-        <div className={styles.info}>
-          <label className={styles.label}>Date</label>
-          <label className={styles.value}>{formattedDate}</label>
+    <div
+      className={styles.home}
+      style={{ backgroundImage: `url(${picture.url})` }}
+    >
+      <div className={styles.overlay}>
+        <div className={styles.infoDiv}>
+          <div className={styles.info}>
+            <label className={styles.label}>Date</label>
+            <label className={styles.value}>{formattedDate}</label>
+          </div>
+
+          <div className={styles.info}>
+            <label className={styles.label}>Title</label>
+            <label className={styles.value}>{picture.title}</label>
+          </div>
         </div>
 
-        <div className={styles.info}>
-          <label className={styles.label}>Title</label>
-          <label className={styles.value}>{picture.title}</label>
-        </div>
+        <p>{picture.explanation}</p>
       </div>
-
-      <p>{picture.explanation}</p>
-
-      <img url={picture.url} className={styles.img} />
     </div>
   );
 }

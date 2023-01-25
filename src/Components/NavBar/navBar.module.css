@@ -8,10 +8,24 @@
   color: teal;
 }
 
+.link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.linkActive {
+  margin-right: 20px;
+  text-decoration: underline;
+  color: whitesmoke;
+  color: gold;
+}
+
 .h1 {
   padding: 0px;
   margin: 0px;
 }
+
 .user {
   color: gold;
 }
