@@ -1,12 +1,12 @@
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./navBar.module.css";
 
 function NavBar(props) {
   const { user, logout } = props;
 
   const getLinkClass = (navData) => {
-    return navData.isActive ? styles.linkActive : styles.link
-  }
+    return navData.isActive ? styles.linkActive : styles.link;
+  };
   return (
     <div className={styles.navBar}>
       <h1 className={styles.h1}>NASA API</h1>
@@ -20,6 +20,10 @@ function NavBar(props) {
         </NavLink>
         <NavLink to="marsWeather" className={getLinkClass}>
           Mars Weather
+        </NavLink>
+
+        <NavLink to="objectsNearEarth" className={getLinkClass}>
+          Objects Near Earth
         </NavLink>
       </div>
 

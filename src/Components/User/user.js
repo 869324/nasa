@@ -5,6 +5,7 @@ import Home from "../Home/home";
 import styles from "./user.module.css";
 import MarsRoverPhotos from "../MarsRover/marRover";
 import MarsWeather from "../MarsWeather/marsWeather";
+import NearEarthObject from "../ObjectsNearEarth/objectsNearEarth";
 
 function User(props) {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function User(props) {
           <Route path="home" element={<Home />} />
           <Route path="marsRover" element={<MarsRoverPhotos />} />
           <Route path="marsWeather" element={<MarsWeather />} />
+          <Route path="objectsNearEarth" element={<NearEarthObject />} />
         </Routes>
       </div>
     </div>
