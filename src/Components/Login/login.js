@@ -17,8 +17,8 @@ function Login(props) {
   };
 
   return (
-    <div className={styles.login}>
-      <form onSubmit={submit}>
+    <div className={styles.login} style={{ backgroundImage: `url("/nasa.jpg")` }}>
+      <form onSubmit={submit} className={styles.form}>
         <h2>NASA API</h2>
 
         <input

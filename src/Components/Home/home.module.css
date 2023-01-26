@@ -3,7 +3,7 @@
   height: 100%;
   color: whitesmoke;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .overlay {
