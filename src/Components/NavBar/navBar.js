@@ -25,6 +25,10 @@ function NavBar(props) {
         <NavLink to="objectsNearEarth" className={getLinkClass}>
           Objects Near Earth
         </NavLink>
+
+        <NavLink to="asteroidList" className={getLinkClass}>
+          Asteroid List
+        </NavLink>
       </div>
 
       <div>

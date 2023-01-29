@@ -52,11 +52,14 @@ const MarsWeather = () => {
   };
 
   return (
-    <div className={styles.weather}>
+    <div className={styles.weather} style={{backgroundImage: `url("/planet-mars.jpg")`}}>
       <h2 className={styles.h2}>Weather on Mars</h2>
-      <p>Temperature: {temperature} F</p>
-      <p>Wind Speed: {windSpeed} mph</p>
-      <p>Pressure: {pressure} Pa</p>
+
+      <div className={styles.data}>
+        <p>Temperature: {temperature} F</p>
+        <p>Wind Speed: {windSpeed} mph</p>
+        <p>Pressure: {pressure} Pa</p>
+      </div>
     </div>
   );
 };

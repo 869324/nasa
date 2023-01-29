@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import API_KEY from "../../Utils/apiKey";
-import "./objectsNearEarth.css";
+import styles from "./objectsNearEarth.module.css";
 
 function NearEarthObject() {
   const [nearEarth, setNearEarth] = useState([]);
@@ -17,10 +17,6 @@ function NearEarthObject() {
         setNearEarth(data.near_earth_objects["2015-09-08"]);
       });
   }, []);
-
-  //let customData = [nearEarth["2015-09-07"]]
-  //console.log(customData);
-  //console.log({customData});
 
   let customList = nearEarth.map((item) => {
     return (
@@ -48,38 +44,30 @@ function NearEarthObject() {
   });
 
   return (
-    <div className="near">
+    <div className={styles.near}>
       <h1>STELLAR SPACE ACTIVITY</h1>
-      <table>
-        <tr>
-          <th>Estimated Kilometer Max</th>
-          <th>NAME</th>
-          <th>CUSTOM APPROACH DATA</th>
-          <th>CUSTOM DISTANCE</th>
-          <th>CUSTOM ORBIT</th>
-          <th>CUSTOM HAZARD</th>
-        </tr>
-        <tr>
-          <td>{customList}</td>
-          <td>{customData}</td>
-          <td>{customApproach}</td>
-          <td> {customDistance} </td>
-          <td>{customOrbit}</td>
-          <td>{customHazard}</td>
-        </tr>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th className={styles.header}>Estimated Kilometer Max</th>
+            <th className={styles.header}>NAME</th>
+            <th className={styles.header}>CUSTOM APPROACH DATA</th>
+            <th className={styles.header}>CUSTOM DISTANCE</th>
+            <th className={styles.header}>CUSTOM ORBIT</th>
+            <th className={styles.header}>CUSTOM HAZARD</th>
+          </tr>
+        </thead>
 
-        {/* <p>Estimated Kilometer Max</p>
-        {customList}
-        <p>NAME</p>
-        {customData}
-        <p>CUSTOM APPROACH DATA</p>
-        {customApproach}
-         <p>CUSTOM DISTANCE</p>
-        {customDistance}
-        <p>CUSTOM ORBIT</p>
-        {customOrbit}
-        <p>CUSTOM HAZARD</p>
-        {customHazard} */}
+        <tbody>
+          <tr>
+            <td className={styles.data}>{customList}</td>
+            <td className={styles.data}>{customData}</td>
+            <td className={styles.data}>{customApproach}</td>
+            <td className={styles.data}> {customDistance} </td>
+            <td className={styles.data}>{customOrbit}</td>
+            <td className={styles.data}>{customHazard}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
